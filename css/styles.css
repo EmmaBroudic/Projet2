@@ -1,23 +1,38 @@
+/* Propriétés CSS appliquées à tous les écrans (Desktop, tablet, mobile) */
+
+/* Ôter les styles par défaut et définir couleur noire lorsque la souris n'est pas au-dessus du lien */
 a {
     color: black;
+    text-decoration: none;
 }
+
+/* Couleur bleue au survol */
 
 a:hover {
     color:#0065FC;
 }
 
+/* Ôter les styles par défaut du menu */
+
 .menu {
     text-decoration: none;
 }
+
+/* Texte du menu en bleu lorsque la souris le survol */
 
 .menu:hover {
     color:#0065FC;
 }
 
+/* Style de la police d'écriture regular hors balises sémantiques */
+
 .style-regular {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
+    margin-top: 8px;
 }
+
+/* Styles de la barre de recherche */
 
 label {
     font-size: 25px;
@@ -52,6 +67,14 @@ button {
     padding: 10px;
 }
 
+/* Styles de la zone info dans le header */
+
+#info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 #info-contour {
     border: 1px #F2F2F2 solid;
     border-radius: 50%;
@@ -61,14 +84,11 @@ button {
     margin-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 11px;
+    padding-right: 11px;
 }
 
-#info {
-    display: flex;
-    flex-direction: row;
-}
+/* Styles des articles de la zone main */
 
 .art-lien {
     text-decoration: none;
@@ -85,6 +105,8 @@ button {
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
+/* Styles des titres h2 et h3 */
+
 h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
@@ -97,6 +119,8 @@ h3 {
     font-weight: 400;
 }
 
+/* Styles des images de la zone main */
+
 .img-cards {
     display: block;
     width: 96%;
@@ -106,6 +130,8 @@ h3 {
     margin: 0 auto;
 }
 
+/* Style de la police en gras utilisée pour "afficher plus" */
+
 #style-bold {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -113,11 +139,15 @@ h3 {
     margin-top: 20px;
 }
 
+/* Positionnement du texte dans un bloc article de la zone Main */
+
 .art-text {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 8px;
 }
+
+/* Couleurs des étoiles */
 
 .blue {
     color: #0065FC;
@@ -127,22 +157,23 @@ h3 {
     color: #F2F2F2;
 }
 
+/* Placement des éléments de la zone titre du bloc aside */
+
 #as-titre {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#as-cards {
-    display: flex;
-    flex-direction: column;
-}
+/* Placement des élements d'un bloc article de la zone aside */
 
 .as-row {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 150px;
 }
+
+/* Style d'un article de la zone aside*/
 
 .as-article {
     background-color: white;
@@ -153,6 +184,8 @@ h3 {
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
+/* Image d'un article dans la zone aside */
+
 .as-img-cards {
     display: block;
     width: 96%;
@@ -162,6 +195,8 @@ h3 {
     margin: 0 auto;
 }
 
+/* Placement du texte d'un article de la zone aside */
+
 .as-art-text {
     display: grid;
     grid-template-rows: 120px 30px;
@@ -169,11 +204,15 @@ h3 {
     padding-right: 15px;
 }
 
+/* Placement des éléments du bloc activités (titre et articles) */
+
 #activites {
     display: flex;
     flex-direction: column;
     margin: 50px;
 }
+
+/* Image d'un article dans la zone activités */
 
 .img-activites {
     display: block;
@@ -184,13 +223,10 @@ h3 {
     margin: 0 auto;
 }
 
-.text-activites {
-    padding-left: 20px;
-    padding-top: 10px;
-}
+/* Styles du footer */
 
 .footer-col {
-    padding: 30px;
+    padding: 20px;
 }
 
 .footer-bold {
@@ -206,16 +242,21 @@ h3 {
     margin: 20px;
 }
 
-@media screen and (min-width: 993px) and (max-width: 1400px) {
-    
+/* Propriétés CSS appliquées aux écrans Desktop */
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+     
+/* Placement du header en version Desktop */
+
     header {
         display: flex;
         flex-direction: column;
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
-        margin-bottom: 20px;
     }
+    
+/* Placement de la zone en-tête dans la version Desktop */
 
     #en-tete {
             display: flex;
@@ -223,12 +264,17 @@ h3 {
             justify-content: space-between;
         }
 
+/* Logo version Desktop */
+
     #logo {
-            width: 60%;
+            width: 50%;
             height: auto;
             object-fit: cover;
+            margin-top: 10px;
         }
-    
+
+/* Menu version Desktop */
+
     ul {
         display: flex;
         list-style: none;
@@ -248,9 +294,13 @@ h3 {
         border-top: 3px  #0065FC solid;
     }
 
+/* Zone recherche - le mot "Rechercher" apparaît et non la loupe en version Desktop */
+
     #mobile1 {
             display: none;
         }
+        
+/* Placement des éléments de la zone de titre en version Desktop */
 
     #titre-site {
         display: flex;
@@ -258,25 +308,24 @@ h3 {
         margin-bottom: 20px;
     }
 
+/* Style du titre h1 en version Desktop */
+
     h1 {
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
         font-weight: 700;
     }
 
-    #recherche {
+/* Placement des éléments des zones recherche et filtres en version Desktop */
+
+    #recherche, #filtres {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         margin-bottom: 20px;
     }
 
-    #filtres {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin-bottom: 20px;
-    }
+/* Style des filtres en version Desktop */
 
     #filtres-bord-sans {
         border: 1px white solid;
@@ -331,12 +380,18 @@ h3 {
         vertical-align: middle;
     }
 
+/* Placement des blocs main et aside en version Desktop */
+
     #body-sec {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        margin: 50px;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 20px;
         gap: 20px;
     }
+    
+/* Placement et style d'un bloc de la section body-sec en Desktop */
 
     .cards {
         display: flex;
@@ -347,6 +402,8 @@ h3 {
         padding: 30px;
     }
 
+/* Placement des articles de la section "Hébergements à Marseille" en Desktop */
+
     #cards-box {
         display: flex;
         flex-direction: row;
@@ -354,17 +411,30 @@ h3 {
         flex-wrap: wrap;
     }
 
+/* Placement des éléments textes et image d'un article de la section Main en Desktop */
+
     .art-column {
         display: grid;
         grid-template-columns: 200px;
         grid-template-rows: 100px 35px 35px 30px;
     }
 
+/* Placement des articles dans le bloc aside en Desktop */
+
+    #as-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Placement des articles dans le bloc "Activités" en Desktop */
+
     #sec-activites {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
+/* Style d'un article du bloc "Activités" en Desktop */
 
     .art-activites {
         display: grid;
@@ -376,6 +446,15 @@ h3 {
         box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
     }
 
+/* Style du texte dans la section "Activités" en Desktop */
+
+    .text-activites {
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+/* Style du footer en Desktop */
+
     footer {
         background-color: #F2F2F2;
         margin-left: 50px;
@@ -383,19 +462,25 @@ h3 {
         margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 992px) {  
-    
+/* Propriétés CSS appliquées au format tablet */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {  
+
+/* Placement du header en version Tablet */
+
     header {
         display: flex;
         flex-direction: column;
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
-        margin-bottom: 20px;
     }
+
+/* Placement de la zone en-tête dans la version Tablet */
 
     #en-tete {
         display: flex;
@@ -404,11 +489,16 @@ h3 {
         margin-bottom: 20px;
     }
 
+/* Logo version tablet */
+
     #logo {
-        width: 60%;
+        width: 50%;
         height: auto;
         object-fit: cover;
+        margin-top: 10px;
     }
+
+/* Menu version Tablet */
 
     ul {
         display: flex;
@@ -429,9 +519,13 @@ h3 {
         border-top: 3px  #0065FC solid;
     }
 
-    #mobile1 {
+/* Zone recherche - la loupe apparaît et non le mot "Rechercher" en version tablet */
+
+    #desktop1 {
         display: none;
     }
+
+/* Placement des éléments de la zone de titre en version Tablet */
 
     #titre-site {
         display: flex;
@@ -439,25 +533,24 @@ h3 {
         margin-bottom: 20px;
     }
 
+/* Style du titre h1 en version Tablet */
+
     h1 {
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
         font-weight: 700;
     }
 
-    #recherche {
+/* Placement des éléments des zones recherche et filtres en version Tablet */
+
+    #recherche, #filtres {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         margin-bottom: 20px;
     }
 
-    #filtres {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin-bottom: 20px;
-    }
+/* Style des filtres en version Tablet */
 
     #filtres-bord-sans {
         border: 1px white solid;
@@ -508,6 +601,8 @@ h3 {
         vertical-align: middle;
     }
 
+/* Placement des blocs main et aside en version Tablet */
+
     #body-sec {
         display: grid;
         grid-template-columns: 1fr;
@@ -515,14 +610,17 @@ h3 {
         gap: 20px;
     }
 
+/* Placement et style d'un bloc de la section body-sec en Tablet */
+
     .cards {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         background-color: #F2F2F2;
         border-radius: 20px 20px 20px 20px;
         padding: 30px;
     }
+
+/* Placement des articles de la section "Hébergements à Marseille" en Tablet */
 
     #cards-box {
         display: grid;
@@ -530,11 +628,23 @@ h3 {
         grid-template-rows: 250px 250px;
     }
 
+/* Placement des éléments textes et image d'un article de la section Main en Tablet */
+
     .art-column {
         display: grid;
         grid-template-columns: 200px;
         grid-template-rows: 100px 35px 35px 30px;
     }
+
+/* Placement des articles dans le bloc aside en Tablet */
+
+    #as-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 250px;
+    }
+
+/* Placement des articles dans le bloc "Activités" en Tablet */
 
     #sec-activites {
         display: flex;
@@ -542,15 +652,26 @@ h3 {
         justify-content: space-between;
     }
 
+/* Style d'un article du bloc "Activités" en Tablet */
+
     .art-activites {
         display: grid;
-        grid-template-columns: 280px;
-        grid-template-rows: 350px 50px;
+        grid-template-columns: 160px;
+        grid-template-rows: 200px 60px;
         background-color: white;
         margin: 10px;
         border-radius: 20px 20px 20px 20px;
         box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
     }
+
+/* Style du texte dans la section "Activités" en Tablet */
+
+    .text-activites {
+        padding-left: 12px;
+        padding-top: 2px;
+    }
+
+/* Style du footer en Tablet */
 
     footer {
         background-color: #F2F2F2;
@@ -559,17 +680,23 @@ h3 {
         margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
     }
 }
 
+/* Placement du header en version Mobile */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+
+/* Placement du header en version Mobile */
 
     header {
         display: flex;
         flex-direction: column;
         margin: 20px;
     }
+
+/* Placement de la zone en-tête dans la version Mobile */
 
     #en-tete {
         display: flex;
@@ -579,6 +706,8 @@ h3 {
         width: 100%;
     }
 
+/* Placement des éléments en-tête en version mobile */
+
     .elem-en-tete {
         display: flex;
         justify-content: center;
@@ -586,12 +715,16 @@ h3 {
         width: 100%;
     }
 
+/* Logo version mobile */
+
     #logo {
         display: block;
         width: 18%;
         height: auto;
         margin : 0 auto;
     }
+
+/* Menu version Mobile */
 
     nav {
         width: 90%;
@@ -618,9 +751,13 @@ h3 {
         border-bottom: 3px  #0065FC solid;
     }
 
+/* Zone recherche - la loupe apparaît et non le mot "Rechercher" en version Mobile */
+
     #desktop1 {
         display: none;
     }
+
+/* Placement des éléments de la zone de titre en version Mobile */
 
     #titre-site {
         display: flex;
@@ -628,11 +765,15 @@ h3 {
         margin-bottom: 30px;
     }
 
+/* Style du titre h1 en version Mobile */
+
     h1 {
         font-family: 'Raleway', sans-serif;
         font-size: 18px;
         font-weight: 700;
     }
+
+/* Placement des éléments des zones recherche et filtres en version Mobile */
 
     #recherche {
         display: flex;
@@ -648,6 +789,8 @@ h3 {
         flex-direction: column;
         margin-bottom: 20px;
     }
+
+/* Style des filtres en version Mobile */
 
     #filtres-bord-sans {
         display: grid;
@@ -706,12 +849,16 @@ h3 {
         vertical-align: middle;
     }
 
+/* Placement des blocs main et aside en version Mobile */
+
     #body-sec {
         display: flex;
         flex-direction: column-reverse;
         margin: 20px;
         gap: 20px;
     }
+
+/* Placement et style d'un bloc de la section body-sec en Mobile */
 
     .cards {
         display: flex;
@@ -722,11 +869,15 @@ h3 {
         padding: 30px;
 }
 
+/* Placement des articles de la section "Hébergements à Marseille" en Mobile */
+
     #cards-box {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 250px 250px 250px 250px 250px 250px;
     }
+
+/* Placement des éléments textes et image d'un article de la section Main en Mobile */
 
     .art-column {
         display: grid;
@@ -734,11 +885,22 @@ h3 {
         grid-template-rows: 100px 35px 35px 30px;
     }
 
+/* Placement des articles dans le bloc aside en Mobile */
+
+    #as-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Placement des articles dans le bloc "Activités" en Mobile */
+
     #sec-activites {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
+/* Style d'un article du bloc "Activités" en Mobile */
     
     .art-activites {
         display: grid;
@@ -749,6 +911,15 @@ h3 {
         border-radius: 20px 20px 20px 20px;
         box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
     }
+
+/* Style du texte dans la section "Activités" en Mobile */
+
+    .text-activites {
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+/* Style du footer en Tablet */
 
     footer {
         background-color: #F2F2F2;
