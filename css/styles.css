@@ -1,5 +1,11 @@
 /* Propriétés CSS appliquées à tous les écrans (Desktop, tablet, mobile) */
 
+/* Retirer les marges par défaut */
+
+body {
+    margin: 0;
+}
+
 /* Ôter les styles par défaut et définir couleur noire lorsque la souris n'est pas au-dessus du lien */
 a {
     color: black;
@@ -12,68 +18,7 @@ a:hover {
     color:#0065FC;
 }
 
-/* Ôter les styles par défaut du menu */
-
-.menu {
-    text-decoration: none;
-}
-
-/* Texte du menu en bleu lorsque la souris le survol */
-
-.menu:hover {
-    color:#0065FC;
-}
-
-/* Style de la police d'écriture regular hors balises sémantiques */
-
-.style-regular {
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    margin-top: 8px;
-}
-
-/* Styles de la barre de recherche */
-
-label {
-    font-size: 25px;
-    background-color: #F2F2F2;
-    border-radius: 20px 0px 0px 20px;
-    padding: 10px;
-}
-
-#barre {
-    border: 1px #F2F2F2 solid;
-}
-
-input {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: black;
-    border: none;
-    text-align: center;
-    padding: 10px;
-}
-
-button {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    background-color: #0065FC;
-    border-radius: 0px 20px 20px 0px;
-    border: none;
-    padding: 10px;
-}
-
-/* Styles de la zone info dans le header */
-
-#info {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
+/* Contour du i de info */
 
 #info-contour {
     border: 1px #F2F2F2 solid;
@@ -86,65 +31,6 @@ button {
     padding-bottom: 5px;
     padding-left: 11px;
     padding-right: 11px;
-}
-
-/* Styles des articles de la zone main */
-
-.art-lien {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.main-article {
-    background-color: white;
-    margin: 10px;
-    padding-top: 5px;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
-}
-
-/* Styles des titres h2 et h3 */
-
-h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-/* Styles des images de la zone main */
-
-.img-cards {
-    display: block;
-    width: 96%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
-    margin: 0 auto;
-}
-
-/* Style de la police en gras utilisée pour "afficher plus" */
-
-#style-bold {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 20px;
-}
-
-/* Positionnement du texte dans un bloc article de la zone Main */
-
-.art-text {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 8px;
 }
 
 /* Couleurs des étoiles */
@@ -202,14 +88,6 @@ h3 {
     grid-template-rows: 120px 30px;
     padding-left: 15px;
     padding-right: 15px;
-}
-
-/* Placement des éléments du bloc activités (titre et articles) */
-
-#activites {
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
 }
 
 /* Image d'un article dans la zone activités */
@@ -294,6 +172,14 @@ h3 {
         border-top: 3px  #0065FC solid;
     }
 
+/* Style de la police d'écriture regular hors balises sémantiques en Desktop */
+
+    .style-regular {
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
 /* Zone recherche - le mot "Rechercher" apparaît et non la loupe en version Desktop */
 
     #mobile1 {
@@ -325,6 +211,41 @@ h3 {
         margin-bottom: 20px;
     }
 
+/* Styles de la barre de recherche en Desktop */
+
+    label {
+        font-size: 25px;
+        background-color: #F2F2F2;
+        border-radius: 20px 0px 0px 20px;
+        padding: 10px;
+    }
+
+    #barre {
+        border: 1px #F2F2F2 solid;
+    }
+
+    input {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        border: none;
+        text-align: center;
+        padding: 10px;
+    }
+
+    button {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        background-color: #0065FC;
+        border-radius: 0px 20px 20px 0px;
+        border: none;
+        padding: 10px;
+    }
+
 /* Style des filtres en version Desktop */
 
     #filtres-bord-sans {
@@ -347,7 +268,7 @@ h3 {
     }
     
     .filtres-bord {
-        border: 1px #F2F2F2 solid;
+        border: 2px #F2F2F2 solid;
         border-radius: 30px 30px 30px 30px;
         padding: 8px;
         margin: 10px;
@@ -380,6 +301,14 @@ h3 {
         vertical-align: middle;
     }
 
+/* Styles de la zone info dans le header en version Desktop */
+
+    #info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
 /* Placement des blocs main et aside en version Desktop */
 
     #body-sec {
@@ -391,9 +320,18 @@ h3 {
         gap: 20px;
     }
     
-/* Placement et style d'un bloc de la section body-sec en Desktop */
+/* Placement et style des blocs heberg et pop de la section body-sec en Desktop */
 
-    .cards {
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: #F2F2F2;
+        border-radius: 20px 20px 20px 20px;
+        padding: 30px;
+    }
+
+    aside {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -419,11 +357,78 @@ h3 {
         grid-template-rows: 100px 35px 35px 30px;
     }
 
+/* Styles des articles de la zone main en Desktop */
+
+    .art-lien {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .main-article {
+        background-color: white;
+        margin: 10px;
+        padding-top: 5px;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+/* Styles des images de la zone main en Desktop */
+    
+    .img-cards {
+        display: block;
+        width: 96%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+        margin: 0 auto;
+    }
+    
+/* Positionnement du texte dans un bloc article de la zone Main en Desktop */
+    
+    .art-text {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 8px;
+    }
+
+/* Styles des titres h2 et h3 en Desktop */
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Style de la police en gras utilisée pour "afficher plus" en Desktop */
+
+    #style-bold {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
 /* Placement des articles dans le bloc aside en Desktop */
 
     #as-cards {
         display: flex;
         flex-direction: column;
+    }
+
+/* Placement des éléments du bloc activités (titre et articles) en Desktop */
+
+    section {
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
     }
 
 /* Placement des articles dans le bloc "Activités" en Desktop */
@@ -519,6 +524,14 @@ h3 {
         border-top: 3px  #0065FC solid;
     }
 
+/* Style de la police d'écriture regular hors balises sémantiques en Tablet */
+
+    .style-regular {
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
 /* Zone recherche - la loupe apparaît et non le mot "Rechercher" en version tablet */
 
     #desktop1 {
@@ -550,6 +563,41 @@ h3 {
         margin-bottom: 20px;
     }
 
+/* Styles de la barre de recherche en Tablet */
+
+    label {
+        font-size: 25px;
+        background-color: #F2F2F2;
+        border-radius: 20px 0px 0px 20px;
+        padding: 10px;
+    }
+
+    #barre {
+        border: 1px #F2F2F2 solid;
+    }
+
+    input {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        border: none;
+        text-align: center;
+        padding: 10px;
+    }
+
+    button {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        background-color: #0065FC;
+        border-radius: 0px 20px 20px 0px;
+        border: none;
+        padding: 10px;
+    }
+
 /* Style des filtres en version Tablet */
 
     #filtres-bord-sans {
@@ -572,7 +620,7 @@ h3 {
     }
     
     .filtres-bord {
-        border: 1px #F2F2F2 solid;
+        border: 2px #F2F2F2 solid;
         border-radius: 30px 30px 30px 30px;
         padding: 8px;
         margin: 10px;
@@ -583,7 +631,7 @@ h3 {
     
     .filtres-blue {
         font-family: 'Raleway', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         color:#0065FC;
         margin: 5px;
@@ -593,7 +641,7 @@ h3 {
     
     .filtres-black {
         font-family: 'Raleway', sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
         color: black;
         margin: 5px;
@@ -601,20 +649,40 @@ h3 {
         vertical-align: middle;
     }
 
+/* Styles de la zone info dans le header en version Tablet */
+
+    #info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
 /* Placement des blocs main et aside en version Tablet */
 
     #body-sec {
         display: grid;
         grid-template-columns: 1fr;
-        margin: 50px;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 20px;
         gap: 20px;
     }
 
-/* Placement et style d'un bloc de la section body-sec en Tablet */
+/* Placement et style des blocs heberg et pop de la section body-sec en Tablet */
 
-    .cards {
+    main {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        background-color: #F2F2F2;
+        border-radius: 20px 20px 20px 20px;
+        padding: 30px;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         background-color: #F2F2F2;
         border-radius: 20px 20px 20px 20px;
         padding: 30px;
@@ -623,9 +691,10 @@ h3 {
 /* Placement des articles de la section "Hébergements à Marseille" en Tablet */
 
     #cards-box {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 250px 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
 /* Placement des éléments textes et image d'un article de la section Main en Tablet */
@@ -636,12 +705,80 @@ h3 {
         grid-template-rows: 100px 35px 35px 30px;
     }
 
+/* Styles des articles de la zone main en Tablet */
+
+    .art-lien {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .main-article {
+        background-color: white;
+        margin: 10px;
+        padding-top: 5px;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+/* Styles des images de la zone main en Tablet */
+    
+    .img-cards {
+        display: block;
+        width: 96%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+        margin: 0 auto;
+    }
+    
+    /* Positionnement du texte dans un bloc article de la zone Main en Tablet */
+    
+    .art-text {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 8px;
+    }
+    
+
+/* Styles des titres h2 et h3 en Tablet */
+
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+/* Style de la police en gras utilisée pour "afficher plus" en Tablet */
+
+    #style-bold {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
 /* Placement des articles dans le bloc aside en Tablet */
 
     #as-cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 250px;
+    }
+
+/* Placement des éléments du bloc activités (titre et articles) en Tablet */
+
+    section {
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
     }
 
 /* Placement des articles dans le bloc "Activités" en Tablet */
@@ -656,7 +793,7 @@ h3 {
 
     .art-activites {
         display: grid;
-        grid-template-columns: 160px;
+        grid-template-columns: 175px;
         grid-template-rows: 200px 60px;
         background-color: white;
         margin: 10px;
@@ -684,16 +821,16 @@ h3 {
     }
 }
 
-/* Placement du header en version Mobile */
+/* Media queries version Mobile */
 
 @media screen and (max-width: 767px) {
+
 
 /* Placement du header en version Mobile */
 
     header {
         display: flex;
         flex-direction: column;
-        margin: 20px;
     }
 
 /* Placement de la zone en-tête dans la version Mobile */
@@ -727,7 +864,8 @@ h3 {
 /* Menu version Mobile */
 
     nav {
-        width: 90%;
+        width: 100%;
+        margin-top: 20px;
     }
 
     ul {
@@ -742,13 +880,21 @@ h3 {
         flex: 1;
         justify-content: space-between;
         font-family: 'Raleway', sans-serif;
-        font-size: 14px;
+        font-size: 20px;
         padding: 25px;
         border-bottom: 3px  #F2F2F2 solid;
     }
         
     li:hover {
         border-bottom: 3px  #0065FC solid;
+    }
+
+/* Style de la police d'écriture regular hors balises sémantiques en Mobile */
+
+    .style-regular {
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        margin-top: 8px;
     }
 
 /* Zone recherche - la loupe apparaît et non le mot "Rechercher" en version Mobile */
@@ -763,13 +909,15 @@ h3 {
         display: flex;
         flex-direction: column;
         margin-bottom: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
 /* Style du titre h1 en version Mobile */
 
     h1 {
         font-family: 'Raleway', sans-serif;
-        font-size: 18px;
+        font-size: 32px;
         font-weight: 700;
     }
 
@@ -779,7 +927,9 @@ h3 {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        margin-bottom: 20px;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 30px;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -787,7 +937,46 @@ h3 {
     #filtres {
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+/* Styles de la barre de recherche en version Mobile */
+
+    label {
+        font-size: 25px;
+        background-color: #F2F2F2;
+        border-radius: 20px 0px 0px 20px;
+        text-align: center;
+        padding: 10px;
+        width: 10%;
+    }
+
+    #barre {
+        border: 1px #F2F2F2 solid;
+        width: 65%;
+    }
+
+    input {
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
+        border: none;
+        text-align: center;
+        padding: 10px;
+    }
+
+    button {
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        background-color: #0065FC;
+        border-radius: 0px 20px 20px 0px;
+        border: none;
+        padding: 10px;
+        width: 10%;
     }
 
 /* Style des filtres en version Mobile */
@@ -807,7 +996,7 @@ h3 {
 
     #filtres-bord-sans-police {
         font-family: 'Raleway', sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
         color: black;
     }
@@ -820,7 +1009,7 @@ h3 {
     }
 
     .filtres-bord {
-        border: 1px #F2F2F2 solid;
+        border: 2px #F2F2F2 solid;
         border-radius: 30px 30px 30px 30px;
         padding: 8px;
         margin: 10px;
@@ -831,17 +1020,17 @@ h3 {
     
     .filtres-blue {
         font-family: 'Raleway', sans-serif;
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 700;
         color:#0065FC;
-        margin: 5px;
+        margin: 7px;
         line-height: 30px;
         vertical-align: middle;
     }
     
     .filtres-black {
         font-family: 'Raleway', sans-serif;
-        font-size: 12px;
+        font-size: 18px;
         font-weight: 700;
         color: black;
         margin: 5px;
@@ -849,32 +1038,49 @@ h3 {
         vertical-align: middle;
     }
 
+/* Styles de la zone info dans le header en version Mobile */
+
+    #info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+
 /* Placement des blocs main et aside en version Mobile */
 
     #body-sec {
         display: flex;
         flex-direction: column-reverse;
-        margin: 20px;
         gap: 20px;
     }
 
-/* Placement et style d'un bloc de la section body-sec en Mobile */
+/* Placement et style des blocs heberg et pop de la section body-sec en Mobile */
 
-    .cards {
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    aside {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         background-color: #F2F2F2;
-        border-radius: 20px 20px 20px 20px;
-        padding: 30px;
-}
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
 /* Placement des articles de la section "Hébergements à Marseille" en Mobile */
 
     #cards-box {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 250px 250px 250px 250px 250px 250px;
+        grid-template-rows:320px 320px 320px 320px 320px 320px;
     }
 
 /* Placement des éléments textes et image d'un article de la section Main en Mobile */
@@ -882,7 +1088,64 @@ h3 {
     .art-column {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 100px 35px 35px 30px;
+        grid-template-rows: 150px 30px 60px 30px;
+    }
+
+/* Styles des articles de la zone main en Mobile */
+
+    .art-lien {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .main-article {
+        background-color: white;
+        margin: 10px;
+        padding-top: 5px;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+/* Styles des images de la zone main en Mobile */
+    
+    .img-cards {
+        display: block;
+        width: 96%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+        margin: 0 auto;
+    }
+    
+/* Positionnement du texte dans un bloc article de la zone Main en Mobile */
+    
+    .art-text {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 8px;
+    }
+    
+
+/* Styles des titres h2 et h3 en Mobile */
+
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+/* Masque le "afficher plus" en Mobile */
+
+    #style-bold {
+        display: none;
     }
 
 /* Placement des articles dans le bloc aside en Mobile */
@@ -890,6 +1153,16 @@ h3 {
     #as-cards {
         display: flex;
         flex-direction: column;
+    }
+
+/* Placement des éléments du bloc activités (titre et articles) en Mobile */
+
+    section {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding-right: 7px;
+        padding-left: 7px;
     }
 
 /* Placement des articles dans le bloc "Activités" en Mobile */
@@ -905,9 +1178,9 @@ h3 {
     .art-activites {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 250px 50px;
+        grid-template-rows: 250px 70px;
         background-color: white;
-        margin: 10px;
+        margin-bottom: 20px;
         border-radius: 20px 20px 20px 20px;
         box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
     }
@@ -919,12 +1192,10 @@ h3 {
         padding-top: 10px;
     }
 
-/* Style du footer en Tablet */
+/* Style du footer en Mobile */
 
     footer {
         background-color: #F2F2F2;
-        margin-left: 50px;
-        margin-right: 50px;
         margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr;
